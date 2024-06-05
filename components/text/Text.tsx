@@ -2,7 +2,7 @@ import React from "react";
 
 type TextProps = {
   className: string;
-  children: React.JSX.Element;
+  children: React.JSX.Element | string;
 };
 
 const Text: React.FC<TextProps> = ({ className, children }) => {

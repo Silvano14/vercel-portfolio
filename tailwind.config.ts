@@ -10,8 +10,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/public/desk.jpg')",
+      },
       fontFamily: {
-        Inconsolata: ["Inconsolata", "serif"],
+        Inconsolata: ["Source Code Pro", "serif"],
       },
     },
   },

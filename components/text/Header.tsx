@@ -13,9 +13,8 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-between items-center w-full">
-      <div className="flex">{renderMenu()}</div>
-      <h1 className="font-Inconsolata text-5xl">Welcome</h1>
+    <div className="flex justify-between items-center">
+      <div className="flex gap-4">{renderMenu()}</div>
     </div>
   );
 }
