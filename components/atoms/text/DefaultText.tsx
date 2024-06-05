@@ -1,12 +1,13 @@
 import React from "react";
 
-type TextProps = {
-  className: string;
+type DefaultTextProps = {
+  className?: string;
   children: React.JSX.Element | string;
 };
 
-const Text: React.FC<TextProps> = ({ className, children }) => {
+export const DefaultText: React.FC<DefaultTextProps> = ({
+  className,
+  children,
+}) => {
   return <p className={`font-Inconsolata ${className}`}>{children}</p>;
 };
-
-export default Text;
