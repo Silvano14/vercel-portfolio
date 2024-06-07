@@ -1,9 +1,9 @@
 "use client";
 
 import HeroTitle from "@/components/atoms/HeroTitle/HeroTitle";
-import Header from "@/components/atoms/text/Header";
+import DefaultIconButton from "@/components/atoms/button/DefaultIconButton";
+import Header from "@/components/molecules/header/Header";
 import Work from "@/components/molecules/work/Work";
-import { Button } from "@nextui-org/react";
 import { IconChevronDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -27,21 +27,21 @@ export default function Home() {
 
   return (
     <main className="relative">
-      <div className="-z-1 relative bg-fixed md:h bg-center flex min-h-screen items-center flex-col justify-between bg-[url('/desk.jpg')] bg-no-repeat bg-cover">
-        <div></div>
-
+      <div className="h-[calc(100vh-64px)] -z-1 relative bg-fixed md:h bg-center grid bg-[url('/desk.jpg')] bg-no-repeat bg-cover">
         <HeroTitle />
 
         <motion.div
           transition={spring}
           initial={{ y: -10 }}
           animate={{ y: 10 }}
+          className="justify-self-center self-end"
         >
-          <Button onClick={executeScroll} isIconOnly variant="light" size="lg">
+          <DefaultIconButton onClick={executeScroll}>
             <IconChevronDown className="size-96" color="white" />
-          </Button>
+          </DefaultIconButton>
         </motion.div>
       </div>
+      <Header></Header>
       <div ref={myRef}>
         <Work />
       </div>
