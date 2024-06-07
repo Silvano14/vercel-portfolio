@@ -34,10 +34,10 @@ function HeroTitle() {
       ref={scope}
       className="flex self-center justify-self-center items-center justify-center flex-col fixed gap-4"
     >
-      <h1 className={"font-Caveat md:text-9xl text-4xl text-center"}>
+      <h1 className={"font-Caveat md:text-9xl text-4xl text-center text-blue"}>
         Silvano
       </h1>
-      <h2 className={"font-Caveat md:text-2xl text-2xl text-center"}>
+      <h2 className={"font-Caveat md:text-2xl text-2xl text-center text-blue"}>
         Portfolio
       </h2>
     </div>

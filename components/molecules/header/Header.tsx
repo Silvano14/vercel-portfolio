@@ -4,7 +4,7 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 
 function Header() {
   return (
-    <div className="h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-32">
+    <div className=" border-t-2 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-32">
       <DefaultText className="text-2xl text-black">
         Silvano Norberti
       </DefaultText>

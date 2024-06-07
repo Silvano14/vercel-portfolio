@@ -9,6 +9,12 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/components/(button|link).js",
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      black: '#000',
+      white: '#fff',
+      blue: "#3333ff",
+    },
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }
