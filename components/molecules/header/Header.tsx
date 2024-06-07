@@ -1,18 +1,19 @@
 import { DefaultText } from "@/components/atoms/text/DefaultText";
-import { Link } from "@nextui-org/react";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import Link from "next/link";
 
-const menus = ["About"];
+const menus = [{ title: "About", target: "/home" }];
 
 function Header() {
   const renderMenus = () => {
-    return menus.map((menu) => (
-      <DefaultText
-        key={menu}
+    return menus.map(({ title, target }) => (
+      <Link
+        key={title}
         className="text-black hover:line-through hover:text-blue transition-all duration-300 ease-in-out cursor-pointer"
+        href={target}
       >
-        {menu}
-      </DefaultText>
+        {title}
+      </Link>
     ));
   };
 
