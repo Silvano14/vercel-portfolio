@@ -32,8 +32,12 @@ function HeroTitle() {
       ref={scope}
       className="flex items-center inset-y-1/2 justify-center flex-col fixed gap-4"
     >
-      <DefaultText className={"text-5xl"}>Silvano Norberti</DefaultText>
-      <DefaultText className={"text-2xl"}>Frontend developer</DefaultText>
+      <DefaultText className={"md:text-5xl text-4xl text-center"}>
+        Silvano Norberti
+      </DefaultText>
+      <DefaultText className={"md:text-2xl text-2xl text-center"}>
+        Frontend developer
+      </DefaultText>
     </div>
   );
 }

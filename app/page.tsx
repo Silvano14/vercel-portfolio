@@ -27,11 +27,7 @@ export default function Home() {
 
   return (
     <main className="relative">
-      <div className="-z-1 relative bg-fixed flex min-h-screen items-center w-full flex-col justify-between bg-[url('/desk.jpg')] bg-no-repeat bg-cover">
-        <div className="fixed w-full px-16 pt-8">
-          <Header />
-        </div>
-
+      <div className="-z-1 relative bg-fixed md:h bg-center flex min-h-screen items-center flex-col justify-between bg-[url('/desk.jpg')] bg-no-repeat bg-cover">
         <div></div>
 
         <HeroTitle />
@@ -41,19 +37,13 @@ export default function Home() {
           initial={{ y: -10 }}
           animate={{ y: 10 }}
         >
-          <Button
-            className="z-10"
-            onClick={executeScroll}
-            isIconOnly
-            variant="light"
-            size="lg"
-          >
+          <Button onClick={executeScroll} isIconOnly variant="light" size="lg">
             <IconChevronDown className="size-96" color="white" />
           </Button>
         </motion.div>
       </div>
       <div ref={myRef}>
-        <Work></Work>
+        <Work />
       </div>
     </main>
   );
