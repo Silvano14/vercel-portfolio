@@ -10,9 +10,9 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      transparent: 'transparent',
-      black: '#000',
-      white: '#fff',
+      transparent: "transparent",
+      black: "#000",
+      white: "#fff",
       blue: "#3333ff",
     },
     screens: {
@@ -37,7 +37,7 @@ const config: Config = {
       },
       fontFamily: {
         Inconsolata: ["Source Code Pro", "serif"],
-        Caveat: ["Caveat", "serif"],
+        DMSerifDisplay: ["DM Serif Display", "serif"],
       },
     },
   },

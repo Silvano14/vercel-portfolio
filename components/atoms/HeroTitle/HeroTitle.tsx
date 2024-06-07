@@ -34,10 +34,18 @@ function HeroTitle() {
       ref={scope}
       className="flex self-center justify-self-center items-center justify-center flex-col fixed gap-4"
     >
-      <h1 className={"font-Caveat md:text-9xl text-4xl text-center text-blue"}>
+      <h1
+        className={
+          "font-DMSerifDisplay md:text-9xl text-4xl text-center text-blue"
+        }
+      >
         Silvano
       </h1>
-      <h2 className={"font-Caveat md:text-2xl text-2xl text-center text-blue"}>
+      <h2
+        className={
+          "uppercase font-DMSerifDisplay md:text-2xl text-2xl text-center text-blue line-through"
+        }
+      >
         Portfolio
       </h2>
     </div>
