@@ -9,7 +9,7 @@ function Header() {
     return menus.map(({ title, target }) => (
       <Link
         key={title}
-        className="text-black hover:line-through hover:text-blue transition-all duration-300 ease-in-out cursor-pointer"
+        className="text-md text-black hover:line-through hover:text-blue transition-all duration-300 ease-in-out cursor-pointer"
         href={target}
       >
         {title}
@@ -18,8 +18,8 @@ function Header() {
   };
 
   return (
-    <div className=" border-t-2 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-32">
-      <DefaultText className="text-2xl text-black">
+    <div className=" border-t-2 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32">
+      <DefaultText className="text-md md:text-2xl text-black">
         Silvano Norberti
       </DefaultText>
       <div className="flex gap-8">
