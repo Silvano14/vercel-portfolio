@@ -16,7 +16,7 @@ const spring = {
   repeat: Infinity,
 };
 
-export default function Home() {
+export default function Hero() {
   const myRef = useRef<HTMLDivElement>(null);
 
   const executeScroll = () => {
@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <main className="relative">
-      <div className="h-[calc(100vh-64px)] -z-1 relative bg-fixed bg-center grid bg-[url('/desk.jpg')] bg-no-repeat bg-cover">
+      <div className="h-[calc(100vh-64px)] -z-1 relative bg-contain bg-center grid bg-[url('/desk.jpg')] bg-no-repeat ">
         <HeroTitle />
 
         <motion.div
