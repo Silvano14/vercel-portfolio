@@ -27,14 +27,14 @@ export default function Hero() {
 
   return (
     <main className="relative">
-      <div className="h-[calc(100vh-64px)] -z-1 relative bg-contain bg-center grid bg-[url('/desk.jpg')] bg-no-repeat ">
+      <div className="h-[calc(100dvh-64px)] -z-1 relative bg-cover bg-center grid bg-[url('/desk.jpg')] bg-no-repeat ">
         <HeroTitle />
 
         <motion.div
           transition={spring}
           initial={{ y: -10 }}
           animate={{ y: 10 }}
-          className="justify-self-center self-end"
+          className="flex justify-self-center self-end"
         >
           <DefaultIconButton onClick={executeScroll}>
             <IconChevronDown className="size-96" color="white" />

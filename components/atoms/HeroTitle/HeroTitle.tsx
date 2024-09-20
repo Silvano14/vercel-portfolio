@@ -32,7 +32,7 @@ function HeroTitle() {
   return (
     <div
       ref={scope}
-      className="flex self-center justify-self-center items-center justify-center flex-col fixed gap-4"
+      className="flex items-center justify-center flex-col fixed gap-4 w-full h-full"
     >
       <h1
         className={
