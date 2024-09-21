@@ -41,7 +41,9 @@ export default function Hero() {
           </DefaultIconButton>
         </motion.div>
       </div>
+
       <Header></Header>
+
       <div ref={myRef}>
         <Work />
       </div>
