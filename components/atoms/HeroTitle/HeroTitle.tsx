@@ -39,7 +39,7 @@ function HeroTitle() {
           "font-DMSerifDisplay md:text-9xl text-4xl text-center text-blue"
         }
       >
-        Silva
+        Silvano
       </h1>
       <h2
         className={
