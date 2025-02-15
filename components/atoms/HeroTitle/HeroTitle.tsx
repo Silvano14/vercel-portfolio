@@ -14,11 +14,11 @@ function HeroTitle() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        animate("h1", { opacity: 0 });
-        animate("h2", { opacity: 0 });
+        animate("h1", { opacity: 0, display: "none" });
+        animate("h2", { opacity: 0, display: "none" });
       } else if (window.scrollY < 400) {
-        animate("h1", { opacity: 1 });
-        animate("h2", { opacity: 1 });
+        animate("h1", { opacity: 1, display: "block" });
+        animate("h2", { opacity: 1, display: "block" });
       }
     };
 

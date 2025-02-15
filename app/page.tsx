@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <main className="relative">
       <div className="h-[calc(100dvh-64px)] -z-1 relative bg-cover bg-center grid bg-[url('/desk.jpg')] bg-no-repeat ">
-        <HeroTitle />
+        {/* <HeroTitle /> */}
 
         <motion.div
           transition={spring}
