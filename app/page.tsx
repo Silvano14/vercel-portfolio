@@ -1,6 +1,5 @@
 "use client";
 
-import HeroTitle from "@/components/atoms/HeroTitle/HeroTitle";
 import DefaultIconButton from "@/components/atoms/button/DefaultIconButton";
 import Header from "@/components/molecules/header/Header";
 import Work from "@/components/molecules/work/Work";
@@ -45,6 +44,7 @@ export default function Hero() {
       <Header></Header>
 
       <div ref={myRef}>
+        <Work />
         <Work />
       </div>
     </main>

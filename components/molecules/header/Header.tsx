@@ -1,10 +1,12 @@
 import { DefaultText } from "@/components/atoms/text/DefaultText";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 const menus = [{ title: "About", target: "/home" }];
 
 function Header() {
+  const container = useRef<HTMLDivElement>(null);
   const renderMenus = () => {
     return menus.map(({ title, target }) => (
       <Link
@@ -17,8 +19,32 @@ function Header() {
     ));
   };
 
+  useEffect(() => {
+    function position() {
+      if (container.current) {
+        if (window.scrollY > 750) {
+          container.current.style.position = "sticky";
+          container.current.style.top = "0px";
+        } else {
+          container.current.style.position = "static";
+          container.current.style.top = "";
+        }
+      }
+    }
+
+    position();
+    document.addEventListener("scroll", position, true);
+
+    return () => {
+      document.removeEventListener("scroll", position, true);
+    };
+  }, []);
+
   return (
-    <div className=" border-t-2 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32">
+    <div
+      ref={container}
+      className="z-10 border-t-2 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32"
+    >
       <DefaultText className="text-md md:text-2xl text-black">
         Silvano Norberti
       </DefaultText>
