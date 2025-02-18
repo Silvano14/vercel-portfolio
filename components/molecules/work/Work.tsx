@@ -6,7 +6,7 @@ function Work() {
       <div className="justify-center flex">
         <h1 className="text-3xl">Projects</h1>
       </div>
-      <div className="flex md:flex-row justify-center flex-col gap-4 items-center md:items-start align-center ">
+      <div className="flex md:flex-row flex-col gap-4 h-full w-full ">
         <Card></Card>
         <Card></Card>
       </div>

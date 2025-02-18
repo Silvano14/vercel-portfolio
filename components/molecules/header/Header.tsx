@@ -21,9 +21,8 @@ function Header() {
 
   useEffect(() => {
     function position() {
-      console.log(window.scrollY);
-      console.log(window.innerHeight);
       if (container.current) {
+        console.log(window.innerHeight);
         if (window.scrollY > window.innerHeight - 64) {
           container.current.style.position = "sticky";
           container.current.style.top = "0px";

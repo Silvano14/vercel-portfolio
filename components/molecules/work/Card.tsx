@@ -32,7 +32,7 @@ export const Card = () => {
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="relative font-Inconsolata border-1 rounded-sm bg-yellow-400 h-fit min-h-40 min-w-40"
+      className="relative font-Inconsolata border-1 rounded-sm bg-yellow-400 h-fit min-h-40 min-w-40 w-full"
     >
       <motion.h1
         className="absolute w-full border-1 bg-red-400 h-full rounded-sm"
