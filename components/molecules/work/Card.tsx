@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import { FC } from "react";
 
 const textMotion = {
   rest: {
@@ -15,7 +15,7 @@ const textMotion = {
   },
   hover: {
     y: 0,
-    opacity: 1,
+    opacity: 0.5,
     height: 160,
     display: "block",
     transition: {
@@ -26,20 +26,28 @@ const textMotion = {
   },
 };
 
-export const Card = () => {
+type Props = {
+  title: string;
+  description: string;
+};
+
+export const Card: FC<Props> = ({ title, description }) => {
   return (
     <motion.div
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="relative font-Inconsolata border-1 rounded-sm bg-yellow-400 h-fit min-h-40 min-w-40 w-full"
+      className="border-blue-700 border-2 cursor-pointer relative font-Inconsolata items-center rounded-sm bg-gray-600 h-fit min-h-40 min-w-40 w-full"
     >
-      <motion.h1
-        className="absolute w-full border-1 bg-red-400 h-full rounded-sm"
+      <div className="flex text-2xl text-blue-900 items-center justify-center h-40">
+        <h1>{title}</h1>
+      </div>
+      <motion.h2
+        className="top-0 absolute text-lg text-justify flex p-4 w-full text-bold text-white h-full rounded-sm "
         variants={textMotion}
       >
-        Hover me!
-      </motion.h1>
+        {description}
+      </motion.h2>
     </motion.div>
   );
 };
