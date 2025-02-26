@@ -1,6 +1,7 @@
 "use client";
 
 import DefaultIconButton from "@/components/atoms/button/DefaultIconButton";
+import HeroTitle from "@/components/atoms/HeroTitle/HeroTitle";
 import Header from "@/components/molecules/header/Header";
 import Work from "@/components/molecules/work/Work";
 import { IconChevronDown } from "@tabler/icons-react";
@@ -26,8 +27,8 @@ export default function Hero() {
 
   return (
     <main className="relative">
-      <div className="h-[calc(100dvh-64px)] -z-1 relative bg-cover bg-center grid bg-[url('/desk.jpg')] bg-no-repeat ">
-        {/* <HeroTitle /> */}
+      <div className="bg-fixed bg-cover overflow-y-scrol h-[calc(100dvh-64px)] -z-1 relative bg-center grid bg-[url('/desk.jpg')] bg-no-repeat ">
+        <HeroTitle />
 
         <motion.div
           transition={spring}

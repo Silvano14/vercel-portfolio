@@ -1,5 +1,5 @@
 import { DefaultText } from "@/components/atoms/text/DefaultText";
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -44,7 +44,7 @@ function Header() {
   return (
     <div
       ref={container}
-      className="z-10 border-t-2 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32"
+      className="border-b-sky-400 border-b-1 z-10 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32"
     >
       <DefaultText className="text-md md:text-2xl text-black">
         Silvano Norberti
@@ -56,14 +56,14 @@ function Header() {
           target="_blank"
           href="https://github.com/Silvano14"
         >
-          <IconBrandGithub color="blue" />
+          <Github className="text-sky-400" />
         </Link>
         <Link
           title="Linkedin link"
           target="_blank"
           href="https://www.linkedin.com/in/silvano-norberti-167639158/"
         >
-          <IconBrandLinkedin color="blue" />
+          <Linkedin className="text-sky-400" />
         </Link>
       </div>
     </div>
