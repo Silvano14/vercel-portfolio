@@ -59,7 +59,9 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
 
   useEffect(() => {
     if (isTapped) {
-      animate("div", "hover");
+      animate("div", titleMotion.hover);
+    } else {
+      animate("div", titleMotion.rest);
     }
   }, [animate, isTapped]);
 
@@ -69,7 +71,6 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
       ref={scope}
       initial="rest"
       whileHover="hover"
-      whileTap="hover"
       animate="rest"
       className="hover:border-sky-400  text-sky-400 bg-black border-2 cursor-pointer relative  font-Inconsolata items-center rounded-sm h-fit min-h-40 min-w-40 w-full flex flex-col"
     >
