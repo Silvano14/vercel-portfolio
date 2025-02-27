@@ -55,15 +55,18 @@ export type CardProps = {
 
 export const Card: FC<CardProps> = ({ title, description, href }) => {
   const [scope, animate] = useAnimate();
+  const [scopeText, animateText] = useAnimate();
   const [isTapped, setIsTapped] = useState(false);
 
   useEffect(() => {
     if (isTapped) {
       animate("div", titleMotion.hover);
+      animateText("div", textMotion.hover);
     } else {
       animate("div", titleMotion.rest);
+      animateText("div", textMotion.rest);
     }
-  }, [animate, isTapped]);
+  }, [animate, animateText, isTapped]);
 
   return (
     <motion.div
@@ -81,6 +84,7 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
         <h1>{title}</h1>
       </motion.div>
       <motion.div
+        ref={scopeText}
         className="justify-between top-0 absolute text-lg text-justify flex p-4 w-full text-bold h-full"
         variants={textMotion}
       >
