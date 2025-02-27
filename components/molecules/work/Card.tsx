@@ -16,8 +16,9 @@ const textMotion = {
   },
   hover: {
     y: 0,
-    opacity: 0.5,
+    opacity: 1,
     height: 160,
+
     display: "block",
     transition: {
       duration: 0.3,
@@ -58,7 +59,7 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="text-sky-400 border-2 cursor-pointer relative  font-Inconsolata items-center rounded-sm h-fit min-h-40 min-w-40 w-full flex flex-col"
+      className="hover:border-sky-400  text-sky-400 bg-black border-2 cursor-pointer relative  font-Inconsolata items-center rounded-sm h-fit min-h-40 min-w-40 w-full flex flex-col"
     >
       <motion.div
         variants={titleMotion}
@@ -67,11 +68,15 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
         <h1>{title}</h1>
       </motion.div>
       <motion.div
-        className="justify-between top-0 absolute text-lg text-justify flex p-4 w-full text-bold h-full rounded-sm bg-gray-600"
+        className="justify-between top-0 absolute text-lg text-justify flex p-4 w-full text-bold h-full"
         variants={textMotion}
       >
-        <Link target="_blank" href={href}>
-          <h2>{description}</h2>
+        <Link
+          target="_blank"
+          href={href}
+          className="h-full flex flex-col justify-between"
+        >
+          <h2 className="">{description}</h2>
           <div className="justify-center flex items-center font-bold text-4xl line-through">
             {title}
           </div>
