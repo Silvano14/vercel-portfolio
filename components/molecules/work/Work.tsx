@@ -17,7 +17,7 @@ const cards: CardProps[] = [
 
 function Work() {
   return (
-    <div className="h-screen px-20 py-4 md:px-32 gap-4 flex flex-col">
+    <div className="h-screen px-14 py-4 md:px-32 gap-4 flex flex-col">
       <div className="justify-center flex">
         <h1 className="text-3xl font-Inconsolata">Projects</h1>
       </div>

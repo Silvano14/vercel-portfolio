@@ -36,14 +36,14 @@ function HeroTitle() {
     >
       <h1
         className={
-          "text-sky-400 font-DMSerifDisplay md:text-9xl text-4xl text-center"
+          "text-sky-400 font-DMSerifDisplay text-7xl sm:text-9xl text-center"
         }
       >
         Silvano
       </h1>
       <h2
         className={
-          " uppercase font-DMSerifDisplay md:text-2xl text-2xl text-center text-sky-400 line-through"
+          " uppercase font-DMSerifDisplay text-4xl text-center text-sky-400 line-through"
         }
       >
         Portfolio
