@@ -11,7 +11,7 @@ function Header() {
     return menus.map(({ title, target }) => (
       <Link
         key={title}
-        className="text-md text-black hover:line-through hover:text-blue transition-all duration-300 ease-in-out cursor-pointer"
+        className="z-10 text-md text-black hover:line-through hover:text-blue transition-all duration-300 ease-in-out cursor-pointer"
         href={target}
       >
         {title}
@@ -55,6 +55,7 @@ function Header() {
           title="GitHub link"
           target="_blank"
           href="https://github.com/Silvano14"
+          className="z-10"
         >
           <Github className="text-sky-400" />
         </Link>
@@ -62,6 +63,7 @@ function Header() {
           title="Linkedin link"
           target="_blank"
           href="https://www.linkedin.com/in/silvano-norberti-167639158/"
+          className="z-10"
         >
           <Linkedin className="text-sky-400" />
         </Link>
