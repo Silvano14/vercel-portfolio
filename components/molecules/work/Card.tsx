@@ -1,3 +1,4 @@
+import { useIsMobile } from "@/hooks/usIsMobile";
 import { motion, useAnimate } from "framer-motion";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
@@ -18,7 +19,6 @@ const textMotion = {
     y: 0,
     opacity: 1,
     height: 160,
-
     display: "block",
     transition: {
       duration: 0.3,
@@ -54,28 +54,27 @@ export type CardProps = {
 };
 
 export const Card: FC<CardProps> = ({ title, description, href }) => {
-  const [scope, animate] = useAnimate();
-  const [scopeText, animateText] = useAnimate();
   const [isTapped, setIsTapped] = useState(false);
+  const isMobile = useIsMobile();
+
+  const [descriptionRef, animate] = useAnimate();
 
   useEffect(() => {
-    if (isTapped) {
-      animate("div", titleMotion.hover);
-      animateText("div", textMotion.hover);
-    } else {
-      animate("div", titleMotion.rest);
-      animateText("div", textMotion.rest);
-    }
-  }, [animate, animateText, isTapped]);
+    if (isMobile)
+      if (isTapped) {
+        animate("div", textMotion.hover);
+      } else {
+        animate("div", textMotion.rest);
+      }
+  });
 
   return (
     <motion.div
       onTap={() => setIsTapped((prev) => !prev)}
-      ref={scope}
       initial="rest"
       whileHover="hover"
-      animate="rest"
-      className="hover:border-sky-400  text-sky-400 bg-black border-2 cursor-pointer relative  font-Inconsolata items-center rounded-sm h-fit min-h-40 min-w-40 w-full flex flex-col"
+      animate={isTapped ? "hover" : "rest"}
+      className="hover:border-sky-400 text-sky-400 bg-black border-2 cursor-pointer relative font-Inconsolata items-center rounded-sm h-fit min-h-40 min-w-40 w-full flex flex-col"
     >
       <motion.div
         variants={titleMotion}
@@ -84,20 +83,29 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
         <h1>{title}</h1>
       </motion.div>
       <motion.div
-        ref={scopeText}
+        ref={descriptionRef}
         className="justify-between top-0 absolute text-lg text-justify flex p-4 w-full text-bold h-full"
         variants={textMotion}
       >
-        <Link
-          target="_blank"
-          href={href}
-          className="h-full flex flex-col justify-between"
-        >
-          <h2 className="">{description}</h2>
-          <div className="justify-center flex items-center font-bold text-4xl line-through">
-            {title}
+        {isMobile ? (
+          <div className="h-full flex flex-col justify-between">
+            <h2 className="text-sm">{description}</h2>
+            <div className="text-md justify-center flex items-center font-bold md:text-4xl line-through">
+              {title}
+            </div>
           </div>
-        </Link>
+        ) : (
+          <Link
+            target="_blank"
+            href={href}
+            className="h-full flex flex-col justify-between"
+          >
+            <h2 className="">{description}</h2>
+            <div className="justify-center flex items-center font-bold text-4xl line-through">
+              {title}
+            </div>
+          </Link>
+        )}
       </motion.div>
     </motion.div>
   );
