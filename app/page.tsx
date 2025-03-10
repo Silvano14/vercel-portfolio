@@ -46,7 +46,6 @@ export default function Hero() {
 
       <div ref={myRef}>
         <Work />
-        <Work />
       </div>
     </main>
   );

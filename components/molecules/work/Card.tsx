@@ -88,9 +88,9 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
         variants={textMotion}
       >
         {isMobile ? (
-          <div className="h-full flex flex-col justify-between">
+          <div className="h-full items-center bg-pink-400 flex flex-col justify-between">
             <h2 className="text-sm">{description}</h2>
-            <div className="text-md justify-center flex items-center font-bold md:text-4xl line-through">
+            <div className="w-full h-fit text-md justify-center bg-green-400 flex items-center font-bold line-through">
               {title}
             </div>
           </div>
