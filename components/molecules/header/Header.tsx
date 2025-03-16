@@ -44,7 +44,7 @@ function Header() {
   return (
     <div
       ref={container}
-      className="border-b-sky-400 border-b-1 z-10 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32"
+      className="border-b-sky-400 border-b-1 z-20 border-blue h-16 bg-white justify-self-center self-end w-full flex justify-between items-center px-6 md:px-32"
     >
       <DefaultText className="text-md md:text-2xl text-black">
         Silvano Norberti

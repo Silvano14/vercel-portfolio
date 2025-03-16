@@ -88,11 +88,11 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
         variants={textMotion}
       >
         {isMobile ? (
-          <div className="h-full items-center bg-pink-400 flex flex-col justify-between">
+          <div className=" items-center flex flex-col justify-between">
             <h2 className="text-sm">{description}</h2>
-            <div className="w-full h-fit text-md justify-center bg-green-400 flex items-center font-bold line-through">
+            <h1 className="text-2xl flex justify-center font-bold line-through">
               {title}
-            </div>
+            </h1>
           </div>
         ) : (
           <Link
@@ -101,9 +101,9 @@ export const Card: FC<CardProps> = ({ title, description, href }) => {
             className="h-full flex flex-col justify-between"
           >
             <h2 className="">{description}</h2>
-            <div className="justify-center flex items-center font-bold text-4xl line-through">
+            <h1 className="justify-center flex font-bold text-4xl line-through">
               {title}
-            </div>
+            </h1>
           </Link>
         )}
       </motion.div>
